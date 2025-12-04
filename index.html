@@ -3,46 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Mockup</title>
+    <title>Nick Velten Mockup - Portfolio</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <nav class="side-nav">
-        <ul>
-            <li><a href="#">Over mij</a></li>
-            <li><a href="#">Track record</a></li>
-            <li><a href="#">Expertises</a></li>
-            <li><a href="#">Ervaringen</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+<body class="antialiased">
 
-    <main class="hero">
+    <!-- Navigation Directory -->
+    <header class="py-4 px-6 md:px-12 fixed w-full z-10">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto">
+            
+            <!-- Left/Center Navigation Links -->
+            <div class="flex space-x-2 sm:space-x-4">
+                <a href="#over-mij" class="nav-link">Over mij</a>
+                <a href="#track-record" class="nav-link hidden sm:block">Track record</a>
+                <a href="#expertises" class="nav-link hidden md:block">Expertises</a>
+                <a href="#ervaringen" class="nav-link hidden lg:block">Ervaringen</a>
+            </div>
 
-        <div class="hero-left">
-            <h1 class="name">
-                <span class="first animated">Nick</span>
-                <span class="last animated">
-                    V<span class="letter">e</span>l<span class="letter">t</span>en
-                </span>
-            </h1>
+            <!-- Right Contact Button -->
+            <div>
+                <a href="#contact" class="contact-button">Contact</a>
+            </div>
+        </nav>
+    </header>
 
-            <p class="subtitle animated">Entrepreneur, Advisor & Investor</p>
+    <!-- Main Content -->
+    <main class="pt-24 pb-12 px-6 md:px-12 max-w-7xl mx-auto">
+        <section id="hero" class="text-center pt-20">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Your Name Here</h1>
+            <p class="text-xl text-gray-400">Digital Strategist & Developer</p>
 
-            <p class="description animated">
-                Na mijn avonturen met Stimmt en Fangage en een rijk netwerk aan ondernemende partners...
-            </p>
-
-            <a href="#" class="cta animated">Contact</a>
-        </div>
-
-        <div class="hero-right animated">
-            <img src="Gila-Arellano.jpg" alt="">
-        </div>
-
+            <div class="mt-12 bg-secondary-bg h-96 w-full rounded-xl flex items-center justify-center text-gray-500">
+                Main Hero Section (Image Placeholder)
+            </div>
+        </section>
     </main>
 
+    <!-- External JS -->
     <script src="script.js"></script>
+
 </body>
 </html>
