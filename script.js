@@ -1,14 +1,19 @@
-// CTA Button Click
-document.getElementById("ctaButton").addEventListener("click", () => {
-    alert("Welcome to MyStartup! Let's build something amazing.");
-});
+// Animate-in on load
+window.addEventListener("load", () => {
+    const animated = document.querySelectorAll(".animated");
 
-// Header shrink on scroll
-window.addEventListener("scroll", () => {
-    const header = document.querySelector("header");
-    if(window.scrollY > 50) {
-        header.classList.add("shrink");
-    } else {
-        header.classList.remove("shrink");
-    }
+    animated.forEach((el, i) => {
+        setTimeout(() => {
+            el.classList.add("animate-in");
+        }, i * 200);
+    });
+
+    // Letter stagger animation
+    const letters = document.querySelectorAll(".letter");
+
+    letters.forEach((letter, i) => {
+        setTimeout(() => {
+            letter.classList.add("letter-visible");
+        }, 800 + i * 150);
+    });
 });
