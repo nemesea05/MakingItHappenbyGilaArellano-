@@ -1,24 +1,32 @@
-/* Tailwind Custom Configuration */
-tailwind.config = {
-    theme: {
-        extend: {
-            colors: {
-                'primary-bg': '#242424',      /* Dark Gray */
-                'secondary-bg': '#333333',    /* Slightly lighter gray */
-                'text-light': '#E5E5E5',      /* Off-white */
-                'border-gray': '#555555',     /* Subtle border */
-            },
-            fontFamily: {
-                sans: ['Inter', 'sans-serif'],
-            }
-        }
-    }
-};
-
-/* Custom body styling */
+/* Global Colors */
 body {
-    background-color: #242424;
-    color: #E5E5E5;
-    min-height: 100vh;
+    background-color: #1a1a1a; /* Primary dark background */
+    color: #f0f0f0;            /* Light text */
     font-family: 'Inter', sans-serif;
+}
+
+.section-placeholder {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #4a4a4a;
+    border-radius: 0.75rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.nav-link {
+    color: #f0f0f0;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-button {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
 }
