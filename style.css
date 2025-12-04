@@ -1,32 +1,37 @@
-/* Global Colors */
+/* Global Styles (Ensure smooth scrolling) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base styles for the body are now handled by Tailwind classes in HTML */
 body {
-    background-color: #1a1a1a; /* Primary dark background */
-    color: #f0f0f0;            /* Light text */
     font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.section-placeholder {
-    min-height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px dashed #4a4a4a;
-    border-radius: 0.75rem;
-    margin-bottom: 3rem;
-    text-align: center;
+/* This is a common pattern in the reference, using large, tight typography */
+.section-heading {
+    /* Use clamp() for fluid typography matching the reference site's impact */
+    font-size: clamp(3rem, 10vw, 9rem);
+    line-height: 0.9;
+    letter-spacing: -0.05em;
 }
 
-.nav-link {
-    color: #f0f0f0;
-    padding: 0.5rem 0.75rem;
-    text-decoration: none;
-    transition: color 0.2s;
+/* The fixed header needs to be transparent to show the background color beneath */
+header {
+    background-color: transparent !important;
 }
 
-.contact-button {
-    background-color: #4CAF50; 
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
+/* The nav links' styles are largely managed in the HTML now for theme switching */
+.nav-link, .contact-button {
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap; /* Prevent buttons from wrapping */
+}
+
+/* Placeholder for Gray Blocks/Images (Now .content-placeholder) */
+/* We keep the minimum height defined for structure */
+.content-placeholder {
+    min-height: 200px; /* Base height for blocks */
+    /* Other styles like background and border-radius are in the HTML */
 }

@@ -3,155 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nick Velten Mockup - Portfolio</title>
+    <title>Nick Velten Mockup - Color-Coded Wireframe</title>
 
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Tailwind Config -->
-    <script src="tailwind.config.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Custom Palette based on reference images
+                        'black-bg': '#000000',           // Pure Black
+                        'light-gray-green-bg': '#BCC8BD', // The pale, dusty green from the Expertises section
+                        'white-bg': '#FFFFFF',           // Pure White
+                        'text-dark': '#1a1a1a',          // Dark text for light backgrounds
+                        'text-light': '#FFFFFF',         // Light text for dark backgrounds
+                        'secondary-text-light': '#a0a0a0', // Gray text for dark backgrounds
+                        'placeholder-gray': '#E5E7EB',   // Placeholder color for images/blocks on light backgrounds
+                        'placeholder-gray-dark': '#2a2a2a', // Placeholder color for images/blocks on dark backgrounds
+                        'accent': '#000000',             // Black for primary accents on light backgrounds
+                    }
+                }
+            }
+        }
+    </script>
 
-    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .section-heading {
+            font-size: clamp(3rem, 10vw, 9rem);
+            line-height: 0.9;
+        }
+        .text-black-bg { color: #FFFFFF; }
+        .text-light-gray-green-bg { color: #000000; }
+        .text-white-bg { color: #000000; }
+        
+        /* Consistent styles for image blocks/placeholders */
+        .content-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.75rem;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+    </style>
 </head>
 
-<body class="antialiased bg-primary-bg">
+<body class="antialiased">
 
-    <header class="py-4 px-6 md:px-12 fixed w-full z-20 bg-primary-bg/95 backdrop-blur-sm">
+    <header class="py-4 px-6 md:px-12 fixed w-full z-20 bg-transparent">
         <nav class="flex justify-between items-center max-w-7xl mx-auto">
             <div class="flex space-x-2 sm:space-x-4">
-                <a href="#about-me" class="nav-link text-accent">Gila Salvador</a>
-                <a href="#track-record" class="nav-link hidden sm:block">Track record</a>
-                <a href="#expertises" class="nav-link hidden md:block">Expertises</a>
-                <a href="#experiences" class="nav-link hidden lg:block">Experiences</a>
+                <a href="#about-me" class="nav-link border border-text-dark rounded-full px-4 py-2 text-text-dark font-bold hover:bg-text-dark hover:text-white-bg transition-colors">About me</a>
+                <a href="#track-record" class="nav-link hidden sm:block border border-text-dark rounded-full px-4 py-2 text-text-dark hover:bg-text-dark hover:text-white-bg transition-colors">Track record</a>
+                <a href="#expertises" class="nav-link hidden md:block border border-text-dark rounded-full px-4 py-2 text-text-dark hover:bg-text-dark hover:text-white-bg transition-colors">Expertises</a>
+                <a href="#experiences" class="nav-link hidden lg:block border border-text-dark rounded-full px-4 py-2 text-text-dark hover:bg-text-dark hover:text-white-bg transition-colors">Experiences</a>
             </div>
+
             <div>
-                <a href="#contact" class="contact-button">Contact</a>
+                <a href="#contact" class="contact-button border border-text-dark rounded-full px-4 py-2 text-text-dark hover:bg-text-dark hover:text-white-bg transition-colors">Contact</a>
             </div>
         </nav>
     </header>
 
-    <main class="pt-24 pb-12 px-6 md:px-12 max-w-7xl mx-auto">
+    <main class="w-full">
 
-        <!-- Hero Section -->
-        <section id="hero" class="text-center pt-20 mb-20">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-text-light">Your Name Here</h1>
-            <p class="text-xl text-text-dark">Digital Strategist & Developer</p>
+        <section id="about-me" class="min-h-screen pt-24 pb-12 px-6 md:px-12 flex flex-col justify-center bg-white-bg text-white-bg">
+            <div class="max-w-7xl mx-auto w-full text-left">
+                <h1 class="section-heading font-extrabold mb-12 text-text-dark">
+                    GILA SALVADOR <br> MAKING IT HAPPEN
+                </h1>
 
-            <div class="mt-12 bg-secondary-bg h-96 w-full rounded-xl flex items-center justify-center text-text-dark text-lg shadow-2xl">
-                Main Hero Section (Image/Video Placeholder) - Impactful Visual
+                <div class="grid lg:grid-cols-2 gap-10 items-center mt-16">
+                    <div class="space-y-6 text-xl text-text-dark">
+                        <p>Summary Paragraph: Brief introduction to Gila Salvador, focusing on impact, value-based collaboration, and long-term success. This is the main text block.</p>
+                        <p>Key professional philosophies or values that drive your work and partnerships.</p>
+                    </div>
+
+                    <div class="content-placeholder bg-placeholder-gray h-64 lg:h-96 w-full text-text-dark shadow-md">
+                                            </div>
+                </div>
             </div>
         </section>
 
-        <!-- About Me Section -->
-        <section id="about-me" class="py-20">
-            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-text-light">👋 About me</h2>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="bg-secondary-bg h-64 md:h-full rounded-xl flex items-center justify-center text-text-dark">
-                    Personal Photo/Avatar
-                </div>
-                <div class="md:col-span-2 space-y-6">
-                    <p class="text-lg text-text-dark">Summary Paragraph 1: Brief introduction and core professional identity.</p>
-                    <p class="text-lg text-text-dark">Summary Paragraph 2: Key professional philosophies or values.</p>
-                    <div class="grid grid-cols-2 gap-4 mt-6">
-                        <div class="p-4 bg-secondary-bg rounded-lg">Fact 1: Detail (Years of Experience)</div>
-                        <div class="p-4 bg-secondary-bg rounded-lg">Fact 2: Detail (Projects Completed)</div>
+        <section id="track-record" class="min-h-screen pt-24 pb-12 px-6 md:px-12 flex flex-col justify-center bg-black-bg text-text-light">
+            <div class="max-w-7xl mx-auto w-full">
+                <div class="grid lg:grid-cols-2 gap-10">
+                    <div class="space-y-4">
+                        <h2 class="section-heading font-extrabold text-secondary-text-light">
+                            FOUNDER <br> DIGITAL <br> AGENCY
+                        </h2>
+                        <div class="absolute bottom-12 left-6 md:left-12 text-secondary-text-light text-sm">
+                            AMSTERDAM & ENSCHEDE / 2010 - 2023 (13 YEARS)
+                        </div>
+                    </div>
+
+                    <div class="pt-8">
+                        <ul class="list-none space-y-4 text-xl">
+                            <li>• Top positions in Emerce 100 and Fonk 150</li>
+                            <li>• Exit in 2021 through acquisition of Loyals Group</li>
+                            <li>• Now active as ambassador & shareholder</li>
+                        </ul>
+                        <div class="content-placeholder bg-placeholder-gray-dark h-32 w-full text-4xl font-black rounded-lg mt-12">
+                            STIMMT LOGO
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <hr class="border-t border-gray-700 my-20">
+        <section id="expertises" class="min-h-screen pt-24 pb-12 px-6 md:px-12 flex flex-col justify-center bg-light-gray-green-bg text-text-dark">
+            <div class="max-w-7xl mx-auto w-full">
+                <h2 class="section-heading font-extrabold mb-12">
+                    YOUR GROW X 10?
+                </h2>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 border-t border-b border-gray-400">
+                    
+                    <div class="py-12 border-r border-gray-400 flex flex-col justify-center px-4">
+                        <h3 class="text-xl font-semibold">Interim/Business Consultant</h3>
+                    </div>
+                    
+                    <div class="py-12 border-r border-gray-400 flex flex-col justify-center px-4">
+                        <h3 class="text-xl font-semibold">Advisor / Advisory Board</h3>
+                    </div>
+                    
+                    <div class="py-12 border-r border-gray-400 flex flex-col justify-center px-4">
+                        <h3 class="text-xl font-semibold">Investor</h3>
+                    </div>
+                    
+                    <div class="py-12 flex flex-col justify-center px-4">
+                        <h3 class="text-xl font-semibold">Speaker</h3>
+                    </div>
+                </div>
+                
+                <p class="text-lg text-text-dark mt-10 max-w-4xl">I'm passionate about leveraging the knowledge, experience, and connections I've built over the years. I collaborate value-based with driven entrepreneurs who want to accelerate their growth. We focus on impact, get to know each other, and strive for long-term success. Contact me, and I'd be happy to tell you more.</p>
+            </div>
+        </section>
 
-        <!-- Track Record Section -->
-        <section id="track-record" class="py-20">
-            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-text-light">🏆 Track record</h2>
-            <div class="space-y-12">
-                <div class="p-8 bg-secondary-bg rounded-xl section-placeholder min-h-24 shadow-lg">
-                    Client Logos / Trust Badges
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="p-6 bg-secondary-bg rounded-xl shadow-lg section-placeholder min-h-64">Project 1 Card</div>
-                    <div class="p-6 bg-secondary-bg rounded-xl shadow-lg section-placeholder min-h-64">Project 2 Card</div>
-                    <div class="p-6 bg-secondary-bg rounded-xl shadow-lg section-placeholder min-h-64">Project 3 Card</div>
-                </div>
-                <div class="mt-12 text-center">
-                    <button class="contact-button text-lg px-8 py-3 bg-accent/80 hover:bg-accent transition">View All Case Studies</button>
+        <section id="experiences" class="min-h-screen pt-24 pb-12 px-6 md:px-12 flex flex-col justify-center bg-white-bg text-text-dark">
+            <div class="max-w-7xl mx-auto w-full">
+                <h2 class="section-heading font-extrabold mb-12">
+                    MY EXPERIENCES
+                </h2>
+                
+                <div class="space-y-12 relative border-l border-gray-400 pl-6 max-w-2xl">
+                    
+                    <div class="relative">
+                        <div class="absolute w-3 h-3 bg-text-dark rounded-full -left-[14.5px] top-1"></div>
+                        <h3 class="text-xl font-semibold">Senior Strategist (Job/Role)</h3>
+                        <p class="text-sm text-text-dark">Company Name, City (2020 - Present)</p>
+                        <p class="text-sm mt-2">Key responsibilities and a major achievement or project summary.</p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute w-3 h-3 bg-text-dark rounded-full -left-[14.5px] top-1"></div>
+                        <h3 class="text-xl font-semibold">Freelance Developer (Job/Role)</h3>
+                        <p class="text-sm text-text-dark">Independent (2018 - 2020)</p>
+                        <p class="text-sm mt-2">Summary of client projects and focus areas.</p>
+                    </div>
+                    
+                    <div class="relative">
+                        <div class="absolute w-3 h-3 bg-text-dark rounded-full -left-[14.5px] top-1"></div>
+                        <h3 class="text-xl font-semibold">Education/Degree</h3>
+                        <p class="text-sm text-text-dark">Institution Name (Dates)</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <hr class="border-t border-gray-700 my-20">
-
-        <!-- Expertises Section -->
-        <section id="expertises" class="py-20">
-            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-text-light">🛠️ Expertises</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="p-8 bg-secondary-bg rounded-xl shadow-lg space-y-4">
-                    <h3 class="text-xl font-semibold">Digital Strategy</h3>
-                    <p class="text-text-dark">Defining roadmaps, user journeys, and competitive analysis.</p>
-                </div>
-                <div class="p-8 bg-secondary-bg rounded-xl shadow-lg space-y-4">
-                    <h3 class="text-xl font-semibold">Development & Engineering</h3>
-                    <p class="text-text-dark">Front-end and back-end development with modern stacks (React, Node, Tailwind).</p>
-                </div>
-                <div class="p-8 bg-secondary-bg rounded-xl shadow-lg space-y-4">
-                    <h3 class="text-xl font-semibold">Design & UX/UI</h3>
-                    <p class="text-text-dark">Wireframing, prototyping, and user-centered design.</p>
-                </div>
-            </div>
-        </section>
-
-        <hr class="border-t border-gray-700 my-20">
-
-        <!-- Experiences Section -->
-        <section id="experiences" class="py-20">
-            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-text-light">📅 Experiences</h2>
-            <div class="space-y-12 relative border-l border-gray-700 pl-6">
-                <div class="relative">
-                    <div class="absolute w-3 h-3 bg-accent rounded-full -left-[14.5px] top-1"></div>
-                    <h3 class="text-xl font-semibold text-text-light">Senior Strategist</h3>
-                    <p class="text-text-dark">Company Name, City (2020 - Present)</p>
-                    <ul class="list-disc list-inside ml-4 text-text-dark text-sm mt-2">
-                        <li>Key responsibility and achievement 1.</li>
-                        <li>Key responsibility and achievement 2.</li>
-                    </ul>
-                </div>
-                <div class="relative">
-                    <div class="absolute w-3 h-3 bg-accent rounded-full -left-[14.5px] top-1"></div>
-                    <h3 class="text-xl font-semibold text-text-light">Freelance Developer</h3>
-                    <p class="text-text-dark">Independent (2018 - 2020)</p>
-                    <ul class="list-disc list-inside ml-4 text-text-dark text-sm mt-2">
-                        <li>Managed and delivered 10+ client projects.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <hr class="border-t border-gray-700 my-20">
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 text-center">
-            <h2 class="text-4xl font-extrabold mb-4 text-text-light">Let's build something great.</h2>
-            <p class="text-xl text-text-dark mb-10">Get in touch to discuss your next project or collaboration.</p>
+        <section id="contact" class="min-h-screen pt-24 pb-12 px-6 md:px-12 flex flex-col justify-center items-center text-center bg-black-bg text-text-light">
+             <h2 class="section-heading font-extrabold mb-12 text-secondary-text-light">
+                LET'S CONNECT
+            </h2>
+            <p class="text-2xl text-secondary-text-light mb-10 max-w-3xl">Ready to talk about accelerating your growth or collaboration? Send me a message.</p>
             
-            <div class="max-w-xl mx-auto p-8 bg-secondary-bg rounded-xl shadow-2xl">
-                <a href="mailto:your.email@example.com" class="contact-button text-xl px-10 py-4 bg-accent hover:bg-accent/80 transition">Email Me Directly</a>
-                <div class="mt-8 flex justify-center space-x-6 text-text-dark">
-                    <a href="#" class="hover:text-accent transition">LinkedIn</a>
-                    <a href="#" class="hover:text-accent transition">GitHub</a>
-                    <a href="#" class="hover:text-accent transition">Twitter/X</a>
+            <div class="max-w-xl mx-auto p-12 bg-placeholder-gray-dark rounded-xl shadow-lg w-full">
+                <a href="mailto:your.email@example.com" class="contact-button text-xl px-10 py-4 font-bold border-2 border-text-light text-text-light hover:bg-white-bg hover:text-black-bg transition-colors">
+                    Start a Conversation
+                </a>
+                
+                <div class="mt-8 flex justify-center space-x-8 text-secondary-text-light text-lg">
+                    <a href="#" class="hover:text-text-light transition">LinkedIn</a>
+                    <a href="#" class="hover:text-text-light transition">GitHub</a>
+                    <a href="#" class="hover:text-text-light transition">Instagram</a>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="py-8 mt-12 border-t border-gray-700 text-center text-text-dark text-sm">
-        <p>&copy; 2025 Your Name Here. All rights reserved. | Design inspired by Nick Velten.</p>
+    <footer class="py-8 border-t border-gray-400 text-center text-text-dark text-sm bg-white-bg">
+        <p>&copy; 2025 Gila Salvador. All rights reserved. | Design inspired by Nick Velten.</p>
     </footer>
 
-    <!-- External JS -->
     <script src="script.js"></script>
 
 </body>
