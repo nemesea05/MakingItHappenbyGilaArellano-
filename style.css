@@ -1,6 +1,7 @@
+/* Global Colors */
 body {
-    background-color: white;
-    color: #111;
+    background-color: #1a1a1a; /* Primary dark background */
+    color: #f0f0f0;            /* Light text */
     font-family: 'Inter', sans-serif;
 }
 
@@ -9,28 +10,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px dashed #f59e0b; /* Orange dashed border */
+    border: 1px dashed #4a4a4a;
     border-radius: 0.75rem;
     margin-bottom: 3rem;
     text-align: center;
 }
 
 .nav-link {
-    color: #ef4444; /* Red */
+    color: #f0f0f0;
     padding: 0.5rem 0.75rem;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 .contact-button {
-    background-color: #ef4444; /* Red */
+    background-color: #4CAF50; 
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.contact-button:hover {
-    background-color: #dc2626; /* Darker Red */
 }
